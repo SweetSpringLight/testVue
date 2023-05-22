@@ -193,7 +193,14 @@ body {
   left: 0;
   clip-path: polygon(0 40%, 50% 0, 100% 40%, 100% 100%, 0 100%);
 }
-
+#mess::before {
+  position: absolute;
+  content: 'Click vô lá thư';
+  white-space: nowrap;
+  bottom: -20px;
+  font-size: 13px;
+  animation: hidden-a 3s ease-in-out infinite;
+}
 .letterForm::after {
   position: absolute;
   width: 100%;
@@ -402,5 +409,22 @@ body {
   100% {
     opacity: 0;
     transform: translateY(80vh);
+  }
+}
+@keyframes hidden-a {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
